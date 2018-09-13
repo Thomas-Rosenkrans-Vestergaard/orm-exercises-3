@@ -70,7 +70,7 @@ import java.util.Objects;
     }
 
     @ManyToOne
-    @JoinColumn(name = "customerNumber", referencedColumnName = "customerNumber", nullable = false)
+    @JoinColumn(name = "customerNumber", referencedColumnName = "customerNumber", nullable = false, insertable = false, updatable = false)
     public CustomerEntity getCustomersByCustomerNumber()
     {
         return this.customersByCustomerNumber;

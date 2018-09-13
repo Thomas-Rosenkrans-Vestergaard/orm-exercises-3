@@ -17,6 +17,9 @@ import java.util.Objects;
     private EmployeeEntity employeesByReportsTo;
     private Collection<EmployeeEntity> employeesByEmployeeNumber;
 
+    @GeneratedValue(strategy = GenerationType.TABLE,generator="s1")
+    @TableGenerator(name="s1",table = "My_SEQ",
+            initialValue = 2000,allocationSize = 25)
     @Id @Column(name = "employeeNumber") public int getEmployeeNumber()
     {
         return this.employeeNumber;

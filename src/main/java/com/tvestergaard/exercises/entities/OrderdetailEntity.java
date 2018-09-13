@@ -82,7 +82,7 @@ import java.util.Objects;
     }
 
     @ManyToOne
-    @JoinColumn(name = "orderNumber", referencedColumnName = "orderNumber", nullable = false)
+    @JoinColumn(name = "orderNumber", referencedColumnName = "orderNumber", nullable = false, insertable = false, updatable = false)
     public OrderEntity getOrdersByOrderNumber()
     {
         return this.ordersByOrderNumber;
@@ -94,7 +94,7 @@ import java.util.Objects;
     }
 
     @ManyToOne
-    @JoinColumn(name = "productCode", referencedColumnName = "productCode", nullable = false)
+    @JoinColumn(name = "productCode", referencedColumnName = "productCode", nullable = false, insertable = false, updatable = false)
     public ProductEntity getProductsByProductCode()
     {
         return this.productsByProductCode;
